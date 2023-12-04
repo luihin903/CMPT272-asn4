@@ -1,0 +1,64 @@
+<form
+    [formGroup] = "form"
+    (ngSubmit) = "onSubmit(form.value)">
+
+    <fieldset>
+
+        <div id="mapid" style = "float: left;"></div>
+
+        <input
+            type = "text"
+            placeholder = "Witness' Name"
+            formControlName = "name"
+            style = "width: 44%; float: left; margin-left: 23px;"
+        >
+        <input
+            type = "number"
+            placeholder = "Witness' Phone Number"
+            formControlName = "phone"
+            style = "width: 44%; float: left; margin-left: 23px;"
+        >
+        <input
+            type = "text"
+            placeholder = "Villain's Name"
+            formControlName = "villain"
+            style = "width: 44%; float: left; margin-left: 23px;"
+        >
+        <input
+            type = "text"
+            placeholder = "Location"
+            formControlName = "location"
+            style = "width: 44%; float: left; margin-left: 23px;"
+        >
+        
+        <input
+            type = "number"
+            placeholder = "Latitude"
+            formControlName = "latitude"
+            style = "width: 44%; float: left; margin-left: 23px;"
+        >
+
+        <input
+            type = "number"
+            placeholder = "Longitude"
+            formControlName = "longitude"
+            style = "width: 44%; float: left; margin-left: 23px;"
+        >
+
+        <input
+            type = "text"
+            placeholder = "Image URL (Optional)"
+            formControlName = "picture"
+            style = "width: 44%; float: left; margin-left: 23px;"
+        >
+        <input
+            type = "text"
+            placeholder = "Extra Info"
+            formControlName = "info"
+        >
+
+        <button [disabled] = "!form.valid">Submit</button>
+    
+    </fieldset>
+
+</form>

@@ -1,0 +1,35 @@
+button {
+    background-color: #037bff;
+    color: white;
+    border: none;
+    width: 100%;
+    height: 64px;
+    font-size: 28px;
+    border-radius: 8px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+tr:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+a {
+    color: #adadad;
+    cursor: pointer;
+}
+
+th {
+    padding: 16px;
+    text-align: left;
+    border-bottom: 4px solid #dee2e6;
+    cursor: pointer;
+}
+
+td {
+    padding: 16px;
+    border-top: 2px solid #dee2e6;
+}

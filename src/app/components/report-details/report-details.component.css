@@ -1,0 +1,37 @@
+section {
+    border: 1px solid black;
+    border-radius: 8px;
+    margin: auto;
+    width: 50%;
+}
+
+img {
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    width: 100%;
+    margin-bottom: 0px;
+}
+
+summary {
+    padding: 32px;
+}
+
+p {
+    margin: 8px;
+}
+
+a {
+    color: #037bff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+button {
+    background-color: white;
+    border-radius: 8px;
+    padding: 8px;
+    margin: 8px;
+    border: 2px solid grey;
+    color: grey;
+    font-size: 32px;
+}

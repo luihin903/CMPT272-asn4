@@ -1,0 +1,12 @@
+<section>
+    <img src = "{{ report.picture }}">
+    <summary>
+        <p><b>Baddie's Name: </b>{{ report.villain }}</p>
+        <p><b>Location: </b>{{ report.location.name }}</p>
+        <p><b>Reported by: </b>{{ report.name }} ({{ report.phone }})</p>
+        <p><b>Status: </b> {{ report.getStatus() }} <a (click) = "change()">CHANGE</a></p>
+        <p><b>Extra Info:</b></p>
+        <p>{{ report.info }}</p>
+        <button onclick = "location.href = ''">BACK</button>
+    </summary>    
+</section>

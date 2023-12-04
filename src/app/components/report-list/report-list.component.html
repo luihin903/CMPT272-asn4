@@ -1,0 +1,57 @@
+<app-map></app-map>
+
+<table>
+    <tr style = "font-weight: bold">
+        
+        <th *ngIf = "byLocation == 1" span (click) = "sortByLocation()">
+            Location&#x25b4;
+        </th>
+        <th *ngIf = "byLocation == 0" span (click) = "sortByLocation()">
+            Location
+        </th>
+        <th *ngIf = "byLocation == -1" span (click) = "sortByLocation()">
+            Location&#x25be;
+        </th>
+
+        <th *ngIf = "byVillain == 1" span (click) = "sortByVillain()">
+            Baddie's Name&#x25b4;
+        </th>
+        <th *ngIf = "byVillain == 0" span (click) = "sortByVillain()">
+            Baddie's Name
+        </th>
+        <th *ngIf = "byVillain == -1" span (click) = "sortByVillain()">
+            Baddie's Name&#x25be;
+        </th>
+
+        <th *ngIf = "byTime == 1" span (click) = "sortByTime()">
+            Time Reported&#x25b4;
+        </th>
+        <th *ngIf = "byTime == 0" span (click) = "sortByTime()">
+            Time Reported
+        </th>
+        <th *ngIf = "byTime == -1" span (click) = "sortByTime()">
+            Time Reported&#x25be;
+        </th>
+
+        <th *ngIf = "byStatus == 1" span (click) = "sortByStatus()">
+            Status&#x25b4;
+        </th>
+        <th *ngIf = "byStatus == 0" span (click) = "sortByStatus()">
+            Status
+        </th>
+        <th *ngIf = "byStatus == -1" span (click) = "sortByStatus()">
+            Status&#x25be;
+        </th>
+
+    </tr>
+    <tr *ngFor = "let r of reports">
+        <td>{{ r.location.name }}</td>
+        <td>{{ r.villain }}</td>
+        <td>{{ r.date }}</td>
+        <td>{{ r.getStatus() }}</td>
+        <td><a href = "report/{{r.id}}">MORE INFO</a></td>
+        <td><a (click) ="delete(r)" style = "color: #ec0800; font-size: 48px;">&#10006;</a></td>
+    </tr>
+</table>
+
+<button onClick = "location.href = 'add'">CREATE NUISANCE REPORT</button>
